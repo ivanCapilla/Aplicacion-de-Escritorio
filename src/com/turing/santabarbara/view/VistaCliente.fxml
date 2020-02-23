@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="552.0" prefWidth="824.0" stylesheets="@Css/panelprincipal.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.turing.santabarbara.control.ControlCliente">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="880.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../vista/img/panelCliente.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="88.0" fitWidth="119.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../vista/img/logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="222.0" layoutY="21.0" prefHeight="70.0" prefWidth="226.0" text="Clientes" textAlignment="CENTER">
+         <font>
+            <Font size="48.0" />
+         </font></Label>
+      <Label layoutX="51.0" layoutY="189.0" text="Nombre" />
+      <Label layoutX="51.0" layoutY="233.0" text="Apellido" />
+      <Label layoutX="51.0" layoutY="283.0" text="Fecha de registro" />
+      <Label layoutX="51.0" layoutY="334.0" text="Email" />
+      <Label layoutX="52.0" layoutY="385.0" text="Teléfono" />
+      <Button fx:id="btnAdd" layoutX="59.0" layoutY="452.0" mnemonicParsing="false" onAction="#add" prefHeight="17.0" prefWidth="119.0" text="GUARDAR">
+         <styleClass>
+            <String fx:value="gray" />
+            <String fx:value="font2" />
+            <String fx:value="main-btn" />
+         </styleClass></Button>
+      <Button fx:id="btnExit" layoutX="217.0" layoutY="452.0" mnemonicParsing="false" onAction="#exit" prefHeight="8.0" prefWidth="137.0" text="SALIR">
+         <styleClass>
+            <String fx:value="main-btn" />
+            <String fx:value="gray" />
+            <String fx:value="font2" />
+         </styleClass></Button>
+      <TextField fx:id="txtNameCli" layoutX="155.0" layoutY="185.0" />
+      <TextField fx:id="txtApeCli" layoutX="155.0" layoutY="229.0" />
+      <TextField fx:id="txtFechRegCli" layoutX="155.0" layoutY="279.0" prefHeight="25.0" prefWidth="201.0" />
+      <TextField fx:id="txtEmaCli" layoutX="130.0" layoutY="330.0" />
+      <TextField fx:id="txtTelCli" layoutX="130.0" layoutY="381.0" />
+      <Label fx:id="lblNumCli" layoutX="583.0" layoutY="30.0" text="N° de cliente" />
+      <Label layoutX="45.0" layoutY="125.0" text="Ingresa los datos corrrespondientes" />
+   </children>
+</AnchorPane>

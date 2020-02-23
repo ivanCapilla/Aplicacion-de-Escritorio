@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="pDash" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="1082.0" stylesheets="@Css/panelprincipal.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.turing.santabarbara.control.ControlPanel">
+   <center>
+      <TabPane cache="true" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" rotateGraphic="true" styleClass="text-center" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="homeTab" text="           INICIO">
+            <content>
+              <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="658.0" prefWidth="1274.0">
+                     <children>
+                        <BarChart fx:id="graphic" layoutX="20.0" layoutY="81.0" prefHeight="250.0" prefWidth="500.0" title="Consultas de este mes">
+                           <xAxis>
+                              <CategoryAxis label="Fecha" side="BOTTOM" fx:id="x">
+                                 <tickLabelFont>
+                                    <Font name="Century Gothic Bold" size="8.0" />
+                                 </tickLabelFont></CategoryAxis>
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="y" label="Cantidad" side="LEFT" upperBound="80.0">
+                                 <tickLabelFont>
+                                    <Font name="Century Gothic Bold" size="8.0" />
+                                 </tickLabelFont></NumberAxis>
+                           </yAxis>
+                        </BarChart>
+                        <BarChart fx:id="graphic4" layoutX="541.0" layoutY="72.0" prefHeight="250.0" prefWidth="500.0" title="Registro de asistencia">
+                           <xAxis>
+                              <CategoryAxis label="Fecha" side="BOTTOM" fx:id="x4" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="y4" label="Cantidad" side="LEFT" upperBound="80.0" />
+                           </yAxis>
+                        </BarChart>
+                        <BarChart fx:id="graphic3" layoutX="41.0" layoutY="322.0" prefHeight="250.0" prefWidth="500.0" title="Últimos registros de Ventas">
+                           <xAxis>
+                              <CategoryAxis label="Fecha" side="BOTTOM" fx:id="x3" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="y3" label="Cantidad" side="LEFT" upperBound="80.0" />
+                           </yAxis>
+                        </BarChart>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="15.0" prefWidth="1089.0" text="Estadísticas">
+                           <font>
+                              <Font name="Century Gothic Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+               <styleClass>
+                  <String fx:value="iconHome" />
+               </styleClass>
+          </Tab>
+          <Tab fx:id="sucursalTab" styleClass="iconSuc" text="           SUCURSALES">
+            <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btn_addSuc" layoutX="25.0" layoutY="165.0" mnemonicParsing="false" onAction="#addSuc" prefHeight="25.0" prefWidth="100.0" text="AGREGAR">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="gray" />
+                              <String fx:value="font2" />
+                              <String fx:value="iconAdd" />
+                           </styleClass>
+                        </Button>
+                        <TextField fx:id="txtFilterSuc" alignment="CENTER" layoutX="715.0" layoutY="165.0" onKeyReleased="#filterSuc" prefHeight="25.0" prefWidth="350.0" promptText="Busca una sucursal" styleClass="iconSear" />
+                        <Button fx:id="btn_dropSuc" layoutX="251.0" layoutY="165.0" mnemonicParsing="false" onAction="#dropSuc" prefHeight="25.0" prefWidth="100.0" text="ELIMINAR">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="gray" />
+                              <String fx:value="font2" />
+                              <String fx:value="iconDrop" />
+                           </styleClass>
+                        </Button>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="74.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="15.0" prefWidth="1089.0" text="Sucursales">
+                           <font>
+                              <Font name="Century Gothic Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_editSuc" layoutX="136.0" layoutY="165.0" mnemonicParsing="false" onAction="#modSuc" prefHeight="25.0" prefWidth="100.0" text="EDITAR">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="gray" />
+                              <String fx:value="font2" />
+                              <String fx:value="iconEdit" />
+                           </styleClass>
+                        </Button>
+                        <TableView fx:id="tab_suc" editable="true" layoutX="16.0" layoutY="205.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="330.0" prefWidth="1051.0" tableMenuButtonVisible="true">
+                           <columns>
+                              <TableColumn fx:id="numSucTB" prefWidth="159.0" text="N°" />
+                              <TableColumn fx:id="nomSucTB" prefWidth="518.0" text="Sucursal" />
+                              <TableColumn fx:id="direccionSucTB" prefWidth="372.0" text="Dirección" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="proveedorTab" styleClass="iconProv" text="           PROVEEDORES">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablaProveedor" layoutX="16.0" layoutY="205.0" prefHeight="330.0" prefWidth="1051.0">
+                          <columns>
+                            <TableColumn fx:id="numeroProve" prefWidth="75.0" text="N°" />
+                            <TableColumn fx:id="nombreProveedor" prefWidth="314.0" text="Nombre" />
+                              <TableColumn fx:id="direccionProveedor" prefWidth="355.0" text="Dirección" />
+                              <TableColumn fx:id="telProveedor" prefWidth="159.0" text="Teléfono" />
+                              <TableColumn fx:id="rfcProveedor" prefWidth="147.0" text="RFC" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnAgregarProve" layoutX="25.0" layoutY="165.0" mnemonicParsing="false" onAction="#agregarProveedor" prefHeight="25.0" prefWidth="100.0" text="AGREGAR">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="font2" />
+                              <String fx:value="gray" />
+                              <String fx:value="iconAdd" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btnEditarProve" layoutX="136.0" layoutY="165.0" mnemonicParsing="false" onAction="#editarProveedor" prefHeight="25.0" prefWidth="100.0" text="EDITAR">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="font2" />
+                              <String fx:value="gray" />
+                              <String fx:value="iconEdit" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btnEliminar" layoutX="251.0" layoutY="165.0" mnemonicParsing="false" onAction="#eliminarProveedore" prefHeight="25.0" prefWidth="100.0" text="ELIMINAR">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="font2" />
+                              <String fx:value="gray" />
+                              <String fx:value="iconDrop" />
+                           </styleClass>
+                        </Button>
+                        <TextField fx:id="txtBuscarProve" alignment="CENTER" layoutX="715.0" layoutY="165.0" onKeyReleased="#buscarProveedores" prefHeight="25.0" prefWidth="350.0" promptText="Busca un proveedor" styleClass="iconSear" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="74.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="15.0" prefWidth="1089.0" text="Proveedores">
+                           <font>
+                              <Font name="Century Gothic Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="sellTab" styleClass="iconVen" text="           VENTAS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="74.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="15.0" prefWidth="1089.0" text="Ventas">
+                           <font>
+                              <Font name="Century Gothic Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtFilterSell" alignment="CENTER" layoutX="715.0" layoutY="165.0" onKeyReleased="#filtroSell" prefHeight="25.0" prefWidth="350.0" promptText="Busca una venta" styleClass="iconSear" />
+                        <Button fx:id="btn_modSell" layoutX="136.0" layoutY="165.0" mnemonicParsing="false" onAction="#detalle" prefHeight="25.0" prefWidth="100.0" text="DETALLE">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="font2" />
+                              <String fx:value="gray" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btn_addSell" layoutX="25.0" layoutY="165.0" mnemonicParsing="false" onAction="#addSell" prefHeight="25.0" prefWidth="100.0" text="AGREGAR">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="font2" />
+                              <String fx:value="gray" />
+                              <String fx:value="iconAdd" />
+                           </styleClass>
+                        </Button>
+                        <TableView fx:id="tabSell" layoutX="16.0" layoutY="205.0" prefHeight="330.0" prefWidth="1051.0">
+                           <columns>
+                              <TableColumn fx:id="clNumVenta" prefWidth="68.0" text="N°" />
+                              <TableColumn fx:id="clFolioVenta" prefWidth="191.0" text="Folio" />
+                              <TableColumn fx:id="clProductVenta" prefWidth="293.0" text="Productos" />
+                              <TableColumn fx:id="clFechaVenta" prefWidth="157.0" text="Fecha" />
+                              <TableColumn fx:id="clHoraVenta" prefWidth="145.0" text="Hora" />
+                              <TableColumn fx:id="clTotalVenta" prefWidth="196.0" text="Total" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="clientTab" styleClass="iconPac" text="           CLIENTES">
+              <content>
+                <AnchorPane fx:id="tablaCliente" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="-3.0" layoutY="74.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="15.0" prefWidth="1089.0" text="Clientes">
+                           <font>
+                              <Font name="Century Gothic Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tablCliente" layoutX="16.0" layoutY="205.0" prefHeight="330.0" prefWidth="1051.0">
+                           <columns>
+                              <TableColumn fx:id="numCliente" prefWidth="81.0" text="N°" />
+                              <TableColumn fx:id="nomCliente" prefWidth="206.0" text="Nombre" />
+                              <TableColumn fx:id="apellidoCliente" prefWidth="170.0" text="Apellido" />
+                              <TableColumn fx:id="fechReg" prefWidth="113.0" text="Fecha de registro" />
+                              <TableColumn fx:id="emailCliente" minWidth="0.0" prefWidth="307.0" text="Email" />
+                              <TableColumn fx:id="telCliente" prefWidth="248.0" text="Teléfono" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnAgregarCli" layoutX="25.0" layoutY="165.0" mnemonicParsing="false" onAction="#agregarCliente" prefHeight="25.0" prefWidth="100.0" text="AGREGAR">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="font2" />
+                              <String fx:value="gray" />
+                              <String fx:value="iconAdd" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btnEditarCliente" layoutX="136.0" layoutY="165.0" mnemonicParsing="false" onAction="#editarCliente" prefHeight="25.0" prefWidth="100.0" text="EDITAR">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="font2" />
+                              <String fx:value="gray" />
+                              <String fx:value="iconEdit" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btnEliminarCli" layoutX="251.0" layoutY="165.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="25.0" prefWidth="100.0" text="ELIMINAR">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="font2" />
+                              <String fx:value="gray" />
+                              <String fx:value="iconDrop" />
+                           </styleClass>
+                        </Button>
+                        <TextField fx:id="txtBusCliente" alignment="CENTER" layoutX="715.0" layoutY="165.0" onKeyReleased="#buscarCliente" prefHeight="25.0" prefWidth="350.0" promptText="Busca un cliente" styleClass="iconSear" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="productTab" styleClass="iconProd" text="           PRODUCTOS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="-3.0" layoutY="73.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="15.0" prefWidth="1089.0" text="Productos">
+                           <font>
+                              <Font name="Century Gothic Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtFilterProdcuto" alignment="CENTER" layoutX="715.0" layoutY="165.0" onKeyReleased="#filterProduct" prefHeight="25.0" prefWidth="350.0" promptText="Buscar un producto" styleClass="iconSear" />
+                        <Button layoutX="251.0" layoutY="165.0" mnemonicParsing="false" onAction="#dropProduct" prefHeight="25.0" prefWidth="100.0" text="ELIMINAR">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="font2" />
+                              <String fx:value="gray" />
+                              <String fx:value="iconDrop" />
+                           </styleClass>
+                        </Button>
+                        <Button layoutX="136.0" layoutY="165.0" mnemonicParsing="false" onAction="#modProduct" prefHeight="25.0" prefWidth="100.0" text="EDITAR">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="font2" />
+                              <String fx:value="gray" />
+                              <String fx:value="iconEdit" />
+                           </styleClass>
+                        </Button>
+                        <Button layoutX="25.0" layoutY="165.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="25.0" prefWidth="100.0" text="AGREGAR">
+                           <styleClass>
+                              <String fx:value="main-btn" />
+                              <String fx:value="font2" />
+                              <String fx:value="gray" />
+                              <String fx:value="iconAdd" />
+                           </styleClass>
+                        </Button>
+                        <TableView fx:id="tabProduct" layoutX="16.0" layoutY="205.0" prefHeight="330.0" prefWidth="1051.0">
+                           <columns>
+                              <TableColumn fx:id="idProduct" prefWidth="139.0" text="N°" />
+                              <TableColumn fx:id="nomProduct" prefWidth="245.0" text="Nombre" />
+                              <TableColumn fx:id="comProduct" prefWidth="278.0" text="Compuesto" />
+                              <TableColumn fx:id="fechaProduct" prefWidth="150.0" text="Fecha de caducidad" />
+                              <TableColumn fx:id="cantidadProduct" prefWidth="238.0" text="Cantidad" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TabPane>
+   </center>
+   <top>
+      <Pane prefHeight="74.0" prefWidth="1082.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="titulo" fx:id="titulo" contentDisplay="TOP" layoutX="-1.0" layoutY="-2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="81.0" prefWidth="1095.0" text="Nombre" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="64.0" fitWidth="88.0" layoutX="980.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Img/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>

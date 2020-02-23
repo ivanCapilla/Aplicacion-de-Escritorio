@@ -1,0 +1,354 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-nov-2019, 11:07:04
+    Author     : Uziel
+*/
+#panel{
+    -fx-background-color: #ffffff;
+}
+#titulo{
+    -fx-background-color: #ffffff;
+    -fx-alignment:CENTER;
+    -fx-text-fill: #000000;
+}
+/* Main tab-pane*/
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #ffffff;
+}
+.tab-pane{
+    -fx-tab-min-width:90px;
+}
+
+
+.text-center {
+    -fx-alignment: CENTER;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+    -fx-pref-width: 150;
+    -fx-pref-heigth: 150;
+    
+}
+.tab-pane .tab{
+    -fx-background-color: linear-gradient(to bottom, rgba(10,112,255,1) 0%, rgba(10,112,255,1) 50%, rgba(0,93,232,1) 51%, rgba(0,93,232,1) 100%);
+    -fx-border-color: black;
+    -fx-border-width:1;
+    -fx-focus-color: none;
+
+}
+.tab-pane .tab:selected{
+    -fx-background-color: ffffff;
+    -fx-border-style: solid solid none solid;
+}
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+.tab:selected .tab-label { 
+    -fx-text-fill: #000000;
+}
+
+/*Botones*/
+.main-btn{
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 14;
+}
+
+.font{
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12pt;
+    -fx-font-family: "Century Gothic Bold";
+}
+.font2{
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 8pt;
+    -fx-font-family: "Century Gothic Bold";
+}
+
+.blue{
+    -fx-background-color: linear-gradient(to bottom, rgba(10,112,255,1) 0%, rgba(10,112,255,1) 50%, rgba(0,93,232,1) 51%, rgba(0,93,232,1) 100%);
+    -fx-border-color: rgb(0, 87, 217);
+}
+.blue:hover{
+    -fx-background-color: linear-gradient(to bottom, rgb(0, 94, 225) 0%, rgb(0, 94, 225) 50%, rgb(0, 75, 179) 51%, rgb(0, 75, 179) 100%);
+    -fx-border-color: rgb(0, 65, 162);
+}
+.gray:hover{
+    -fx-background-color: linear-gradient(to bottom, #D8D8D8 0%, #D8D8D8 50%, #BDBDBD 51%, #BDBDBD 100%);
+    -fx-border-color: #A4A4A4;
+}
+.gray{
+    -fx-background-color: linear-gradient(to bottom, rgba(10,112,255,1) 0%, rgba(10,112,255,1) 50%, rgba(0,93,232,1) 51%, rgba(0,93,232,1) 100%);
+    -fx-border-color: rgb(0, 87, 217);
+}
+/* Iconos del menu*/
+.iconHome{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/homeH.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+}
+.iconHome:hover{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/home.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+        
+}
+.iconHome:selected{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/home.png');
+}
+
+.iconSuc{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/sucH.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+}
+.iconSuc:hover{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/suc.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+        
+}
+.iconSuc:selected{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/suc.png');
+}
+
+.iconProv{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/provH.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+}
+.iconProv:hover{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/prov.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+        
+}
+.iconProv:selected{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/prov.png');
+}
+
+.iconVen{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/sellH.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+}
+.iconVen:hover{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/sell.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+        
+}
+.iconVen:selected{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/sell.png');
+}
+
+.iconPac{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/perH.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+}
+.iconPac:hover{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/per.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+        
+}
+.iconPac:selected{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/per.png');
+}
+
+.iconProd{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/carH.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+}
+.iconProd:hover{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/car.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+        
+}
+.iconProd:selected{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/car.png');
+}
+
+.iconEmp{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/empH.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+}
+.iconEmp:hover{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/emp.png');
+    -fx-background-size: 22px 22px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+        
+}
+
+.iconAdd:hover{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/addH.png');
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+}
+.iconAdd{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/add.png');
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+        
+}
+.iconEdit:hover{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/editH.png');
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+}
+.iconEdit{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/edit.png');
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 10% 50%;
+        
+}
+.iconDrop:hover{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/dropH.png');
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 10% 50%;
+}
+.iconDrop{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/drop.png');
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 4% 50%;
+        
+}
+.iconSear:selected{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/searH.png');
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+}
+.iconSear:hover{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/searH.png');
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+}
+.iconSear{
+    -fx-background-image: url('/com/turing/santabarbara/vista/img/sear.png');
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5% 50%;
+        
+}
+
+/* formato para las celdas del tableview */
+.table-cell {     
+    -fx-padding: 0.5em 0.5em 0.1em 0.3em;
+    -fx-border-color: -fx-box-border -fx-box-border transparent transparent;  
+    -fx-font: 13px "Segoe UI";    
+    -fx-border-insets: 0;
+}
+
+/* color de fondo para cuando el raton este sobre la celda */
+.table-cell:hover {
+    -fx-background-color: none;
+}
+
+/* color para filas vacias, 
+// aplicar el mismo color cuando el raton este sobre una celda de una fila vacia */
+.table-row-cell:empty, .table-cell:empty:hover {
+    -fx-background-color: whitesmoke;
+}
+ 
+/* eliminar borde de celdas en las filas vacias*/
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+
+/*// color de una fila cuando en raton se encuentra sobre la misma*/  
+.table-view:row-selection .table-row-cell:filled:hover { 
+    -fx-background-color: rgba(28, 183, 236, 0.25);
+}
+
+/*// color de una fila cuando en raton se encuentra sobre una fila que esta seleccionada*/
+.table-view:row-selection .table-row-cell:filled:selected:hover { 
+    -fx-background-color: rgba(228, 183, 236, 0.90);
+}
+
+/*// color de una fila seleccionada por el usuario*/
+.table-view:row-selection .table-row-cell:filled:selected { 
+    -fx-background-color: rgba(28, 183, 236, 0.65);
+}
+
+/*// eliminar border del table que aparece cuando el mismo tiene el foco*/
+.table-view, .table-view:focused {
+  -fx-background-color: transparent,-fx-box-border,-fx-control-inner-background;
+  -fx-background-insets: -1.4, 0, 1;
+  -fx-background-radius: 1.4, 0, 0;
+}
+ 
+/*// centrar y cambiar color de los titulos de columnas*/
+.table-view .column-header .label{
+    -fx-text-fill: #52677A;
+    -fx-alignment: CENTER;
+}
+
+/*// color de fondo del titulo de columna cuando en roton esta sobre ella*/
+.table-view .column-header:hover {
+    -fx-background-color: whitesmoke;
+}
+
+/*// tamaño, bordes y color de fondo de los titulos*/
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: white;    
+    -fx-size: 45;
+    -fx-border-color: -fx-box-border;
+    -fx-border-width: 0 1 3 0;
+    -fx-border-insets: 0;
+}
+
+/*// hacer transparente el fondo de los titulos*/
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+/*// estylo para el boton que permite ocultar o mostrar las columnas*/
+.table-view .show-hide-columns-button {
+    -fx-background-color: white;
+    -fx-border-color: -fx-box-border;
+    -fx-border-insets: 0;
+}
+
+.textArea{
+    -fx-background: none;
+    -fx-background-color: none;
+    -fx-border-width: 0 0 0 0;
+    
+}
+.text-area .content{
+      -fx-background-color: none;
+  }

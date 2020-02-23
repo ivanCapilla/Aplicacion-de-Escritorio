@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="496.0" prefWidth="880.0" stylesheets="@Css/panelprincipal.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.turing.santabarbara.control.ControlEmpleado">
+   <children>
+      <ImageView fitHeight="525.0" fitWidth="880.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../vista/img/panelEmpleados.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="89.0" fitWidth="133.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../vista/img/logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="223.0" prefHeight="89.0" prefWidth="249.0" text="Empleados">
+         <font>
+            <Font size="48.0" />
+         </font></Label>
+      <Label fx:id="lblNumCliente" layoutX="514.0" layoutY="27.0" text="N°" />
+      <Label layoutX="48.0" layoutY="157.0" text="Nombre" />
+      <Label layoutX="48.0" layoutY="198.0" text="Apellido paterno" />
+      <Label layoutX="48.0" layoutY="242.0" text="Apellido Materno" />
+      <Label layoutX="48.0" layoutY="390.0" text="Email" />
+      <Label layoutX="48.0" layoutY="435.0" text="Dirección" />
+      <Label layoutX="339.0" layoutY="153.0" text="Teléfono" />
+      <Label layoutX="331.0" layoutY="195.0" text="Fecha de nacimiento" />
+      <Label layoutX="317.0" layoutY="238.0" text="Fecha de ingreso" />
+      <Label layoutX="336.0" layoutY="291.0" text="NSS" />
+      <Label layoutX="324.0" layoutY="342.0" text="RFC" />
+      <Label layoutX="328.0" layoutY="390.0" text="CURP" />
+      <TextField fx:id="txtNameEmpl" layoutX="109.0" layoutY="153.0" prefHeight="25.0" prefWidth="177.0" />
+      <TextField fx:id="txtApePEmp" layoutX="151.0" layoutY="195.0" />
+      <TextField fx:id="txtApeMEmpl" layoutX="151.0" layoutY="238.0" />
+      <TextField fx:id="txtEmailEmpleado" layoutX="95.0" layoutY="386.0" prefHeight="25.0" prefWidth="177.0" />
+      <TextField fx:id="txtDirEmpleado" layoutX="146.0" layoutY="431.0" />
+      <TextField fx:id="txtTelEmleado" layoutX="415.0" layoutY="149.0" />
+      <TextField fx:id="txtFechNacEmp" layoutX="456.0" layoutY="191.0" />
+      <TextField fx:id="txtFechaIngreso" layoutX="439.0" layoutY="239.0" />
+      <TextField fx:id="txtNssEmple" layoutX="386.0" layoutY="287.0" />
+      <TextField fx:id="txtRfcEmpleado" layoutX="386.0" layoutY="338.0" />
+      <TextField fx:id="txtCurpEmpleado" layoutX="390.0" layoutY="386.0" />
+      <AmbientLight color="CHARTREUSE" layoutX="576.0" layoutY="36.0" lightOn="true" />
+      <Button fx:id="btnAceptar" layoutX="351.0" layoutY="440.0" mnemonicParsing="false" onAction="#add" prefHeight="28.0" prefWidth="134.0" text="GUARDAR">
+         <styleClass>
+            <String fx:value="main-btn" />
+            <String fx:value="gray" />
+            <String fx:value="font2" />
+         </styleClass></Button>
+      <Button fx:id="btnSalir" layoutX="528.0" layoutY="440.0" mnemonicParsing="false" onAction="#exit" prefHeight="28.0" prefWidth="134.0" text="SALIR">
+         <styleClass>
+            <String fx:value="main-btn" />
+            <String fx:value="font2" />
+            <String fx:value="gray" />
+         </styleClass></Button>
+   </children>
+</AnchorPane>

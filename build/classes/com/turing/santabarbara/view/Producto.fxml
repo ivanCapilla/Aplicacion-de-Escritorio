@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="880.0" stylesheets="@Css/panelprincipal.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.turing.santabarbara.control.ProductoControl">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="880.0" pickOnBounds="true">
+         <image>
+            <Image url="@../vista/img/panelCliente.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtNomProduc" alignment="CENTER" layoutX="44.0" layoutY="100.0" prefHeight="25.0" prefWidth="250.0" promptText="Nombre">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtLotProduc" alignment="CENTER" layoutX="41.0" layoutY="214.0" prefHeight="25.0" prefWidth="108.0" promptText="Lote">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtCanProduc" alignment="CENTER" layoutX="169.0" layoutY="214.0" prefHeight="25.0" prefWidth="123.0" promptText="Cantidad">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtDatProduc" alignment="CENTER" layoutX="44.0" layoutY="275.0" prefHeight="23.0" prefWidth="250.0" promptText="Dia / Mes / Año">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <ComboBox fx:id="cnProvProduc" layoutX="44.0" layoutY="392.0" prefHeight="25.0" prefWidth="250.0" />
+      <ComboBox fx:id="cbAlmProduc" layoutX="44.0" layoutY="445.0" prefHeight="25.0" prefWidth="250.0" />
+      <Label alignment="CENTER" layoutX="52.0" layoutY="76.0" prefHeight="18.0" prefWidth="250.0" text="NOMBRE">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="52.0" layoutY="188.0" prefHeight="18.0" prefWidth="94.0" text="LOTE">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="169.0" layoutY="188.0" prefHeight="18.0" prefWidth="94.0" text="CANTIDAD">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="44.0" layoutY="248.0" prefHeight="18.0" prefWidth="250.0" text="FECHA CADUCIDAD">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="44.0" layoutY="368.0" prefHeight="18.0" prefWidth="250.0" text="PROVEEDOR">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="44.0" layoutY="421.0" prefHeight="18.0" prefWidth="250.0" text="ALMACÉN">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_add" layoutX="39.0" layoutY="503.0" mnemonicParsing="false" onAction="#add" prefHeight="23.0" prefWidth="108.0" text="GUARDAR">
+         <styleClass>
+            <String fx:value="main-btn" />
+            <String fx:value="font2" />
+            <String fx:value="gray" />
+         </styleClass>
+      </Button>
+      <Label alignment="CENTER" layoutY="14.0" prefHeight="18.0" prefWidth="880.0" text="PRODUCTOS">
+         <font>
+            <Font name="Century Gothic Bold" size="36.0" />
+         </font>
+      </Label>
+      <Pane layoutX="569.0" layoutY="60.0" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <Label layoutX="15.0" layoutY="-1.0" prefHeight="25.0" prefWidth="62.0" text="CÓDIGO">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbIdProduct" alignment="CENTER" layoutX="77.0" layoutY="-1.0" prefHeight="25.0" prefWidth="174.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="txtComProduc" alignment="CENTER" layoutX="44.0" layoutY="157.0" prefHeight="25.0" prefWidth="250.0" promptText="Compuesto">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <Label alignment="CENTER" layoutX="52.0" layoutY="131.0" prefHeight="18.0" prefWidth="250.0" text="COMPUESTO">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPreProduc" alignment="CENTER" layoutX="44.0" layoutY="331.0" prefHeight="25.0" prefWidth="250.0" promptText="Precio" />
+      <Label alignment="CENTER" layoutX="44.0" layoutY="307.0" prefHeight="18.0" prefWidth="250.0" text="PRECIO">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

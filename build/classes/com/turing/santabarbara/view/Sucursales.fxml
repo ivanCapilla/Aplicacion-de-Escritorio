@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="780.0" stylesheets="@Css/panelprincipal.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.turing.santabarbara.control.ControlSucursal">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="880.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../vista/img/FondoSucursal.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_add" layoutX="17.0" layoutY="381.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="194.0" text="GUARDAR">
+         <styleClass>
+            <String fx:value="main-btn" />
+            <String fx:value="font2" />
+            <String fx:value="gray" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btn_exit" layoutX="228.0" layoutY="381.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="194.0" text="SALIR">
+         <styleClass>
+            <String fx:value="main-btn" />
+            <String fx:value="font2" />
+            <String fx:value="gray" />
+         </styleClass>
+      </Button>
+      <Label alignment="CENTER" layoutX="132.0" layoutY="19.0" prefHeight="25.0" prefWidth="230.0" text="Sucursales">
+         <font>
+            <Font name="Century Gothic Bold" size="41.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="89.0" fitWidth="99.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../vista/img/logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="607.0" layoutY="19.0" prefHeight="17.0" prefWidth="230.0" text="N°">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="158.0" prefHeight="20.0" prefWidth="170.0" text="Nombre de la Sucursal">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="193.0" prefHeight="20.0" prefWidth="80.0" text="Calle">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtIdSuc" alignment="CENTER" editable="false" layoutX="607.0" layoutY="49.0" prefHeight="25.0" prefWidth="230.0" promptText="NUmero">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="txtName" alignment="CENTER" layoutX="178.0" layoutY="155.0" prefHeight="25.0" prefWidth="230.0" promptText="Escribe el nombre aquí">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="txtAddres" alignment="CENTER" layoutX="104.0" layoutY="190.0" prefHeight="25.0" prefWidth="230.0" promptText="Escribe el nombre de la">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font></TextField>
+      <Label layoutX="40.0" layoutY="113.0" prefHeight="17.0" prefWidth="839.0" text="Ingresa los datos necesarios para registrar a una nueva Sucursal" />
+      <TextField fx:id="txtAddres1" alignment="CENTER" layoutX="113.0" layoutY="229.0" prefHeight="25.0" prefWidth="230.0" promptText="Escribe el nombre de la">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="24.0" layoutY="232.0" prefHeight="20.0" prefWidth="80.0" text="Colonia">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="273.0" prefHeight="20.0" prefWidth="80.0" text="Número Ext">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddres11" alignment="CENTER" layoutX="132.0" layoutY="270.0" prefHeight="26.0" prefWidth="64.0" promptText="Escribe el nombre de la">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAddres111" alignment="CENTER" layoutX="123.0" layoutY="314.0" prefHeight="25.0" prefWidth="230.0" promptText="Escribe el nombre de la">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="24.0" layoutY="317.0" prefHeight="20.0" prefWidth="80.0" text="Municipio">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddres112" alignment="CENTER" layoutX="323.0" layoutY="270.0" prefHeight="26.0" prefWidth="64.0" promptText="Escribe el nombre de la">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="228.0" layoutY="273.0" prefHeight="20.0" prefWidth="80.0" text="Número Int">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

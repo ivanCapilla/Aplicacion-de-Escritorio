@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="ap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="277.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.turing.santabarbara.control.ControlLogin">
+   <children>
+      <Button id="boton" layoutX="145.0" layoutY="310.0" mnemonicParsing="false" onAction="#logIn" prefHeight="31.0" prefWidth="102.0" stylesheets="@Css/login.css" text="Entrar" textFill="WHITE" />
+      <PasswordField fx:id="password" alignment="CENTER" layoutX="29.0" layoutY="233.0" prefHeight="31.0" prefWidth="218.0" promptText="Contraseña" />
+      <TextField fx:id="usuario" alignment="CENTER" layoutX="29.0" layoutY="182.0" prefHeight="31.0" prefWidth="218.0" promptText="Usuario" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="34.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../vista/img/logo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="error" alignment="CENTER" layoutX="34.0" layoutY="276.0" prefHeight="17.0" prefWidth="211.0" textAlignment="CENTER" textFill="RED" />
+   </children>
+</AnchorPane>

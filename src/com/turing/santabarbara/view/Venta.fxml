@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="880.0" stylesheets="@Css/panelprincipal.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.turing.santabarbara.control.VentaControl">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="880.0" pickOnBounds="true">
+         <image>
+            <Image url="@../vista/img/bgProducts.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="3.0" layoutY="14.0" prefHeight="25.0" prefWidth="880.0" text="VENTA">
+         <font>
+            <Font name="Century Gothic Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="BOTTOM" layoutX="37.0" layoutY="61.0" prefHeight="20.0" prefWidth="383.0" text="Producto">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbProduct" layoutX="37.0" layoutY="128.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#actionProducto" prefHeight="25.0" prefWidth="383.0" promptText="SELECCIONA UN PROCDUCTO" />
+      <TextField fx:id="filterProduct" alignment="CENTER" layoutX="37.0" layoutY="94.0" onKeyReleased="#filterProduct" prefHeight="25.0" prefWidth="383.0" promptText="Buscar un producto" />
+      <Label contentDisplay="BOTTOM" layoutX="37.0" layoutY="178.0" prefHeight="17.0" prefWidth="76.0" text="Compuesto:">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="BOTTOM" layoutX="37.0" layoutY="209.0" prefHeight="17.0" prefWidth="76.0" text="Precio:">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabProducts" layoutX="37.0" layoutY="275.0" prefHeight="200.0" prefWidth="383.0">
+        <columns>
+          <TableColumn fx:id="clName" prefWidth="240.0" text="Nombre" />
+            <TableColumn fx:id="clAmount" prefWidth="67.0" text="Cantidad" />
+          <TableColumn fx:id="clCount" prefWidth="75.0" text="Precio" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_drop" layoutX="348.0" layoutY="204.0" mnemonicParsing="false" onAction="#dropProduct" prefHeight="26.0" prefWidth="72.0" text="QUITAR">
+         <styleClass>
+            <String fx:value="main-btn" />
+            <String fx:value="font2" />
+            <String fx:value="gray" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btn_add" layoutX="348.0" layoutY="239.0" mnemonicParsing="false" onAction="#addProduct" text="AGREGAR">
+         <styleClass>
+            <String fx:value="main-btn" />
+            <String fx:value="font2" />
+            <String fx:value="gray" />
+         </styleClass>
+      </Button>
+      <Label fx:id="txtNameProduct" layoutX="136.0" layoutY="178.0" prefHeight="17.0" prefWidth="199.0">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtPrecio" layoutX="133.0" layoutY="209.0" prefHeight="18.0" prefWidth="199.0">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="197.0" layoutY="494.0" prefHeight="20.0" prefWidth="76.0" text="TOTAL:">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="total" layoutX="283.0" layoutY="494.0" prefHeight="20.0" prefWidth="137.0">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAmount" alignment="CENTER" layoutX="125.0" layoutY="239.0" prefHeight="23.0" prefWidth="184.0" promptText="Ingresa un número">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Label contentDisplay="BOTTOM" layoutX="37.0" layoutY="243.0" prefHeight="17.0" prefWidth="76.0" text="Cantidad:">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="688.0" layoutY="39.0" text="N°">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbIdVenta" alignment="CENTER" layoutX="710.0" layoutY="39.0" prefHeight="18.0" prefWidth="155.0">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_saveSell" layoutX="37.0" layoutY="492.0" mnemonicParsing="false" onAction="#saveSell" prefHeight="25.0" prefWidth="125.0" text="GUARDAR">
+         <styleClass>
+            <String fx:value="main-btn" />
+            <String fx:value="font2" />
+            <String fx:value="gray" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>
