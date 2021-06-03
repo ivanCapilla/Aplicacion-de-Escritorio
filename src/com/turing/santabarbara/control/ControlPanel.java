@@ -230,8 +230,8 @@ public class ControlPanel implements Initializable {
     @FXML void addSuc(){
         try {
             int id=0;
-            ResultSet res = db.consulta("select idSucursal from sucursal"
-                                        +"order by idSucursal DESC LIMIT 0,1;");
+                ResultSet res = db.consulta("select idSucursal from sucursal"
+                                            +"order by idSucursal DESC LIMIT 0,1;");
                 if(res.next()){
                 id = Integer.parseInt(res.getString(1));
                 }
@@ -757,7 +757,7 @@ public class ControlPanel implements Initializable {
     
     public void cargarTablaCliente(){
         try {
-            ResultSet resultado = db.consulta("select * from cliente;");
+                ResultSet resultado = db.consulta("select * from cliente;");
             if (resultado.next()) {
                 do {     
                 Cliente objCliente = new Cliente();
